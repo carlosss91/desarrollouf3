@@ -1,7 +1,10 @@
 <?php
-require_once __DIR__ . 'config/database.php';
-require_once 'app/controllers/UsuariosController.php';
-require_once 'app/controllers/NoticiasController.php';
+
+require_once 'config/database.php';  // Incluimos el archivo de configuración de la base de datos
+require_once CONFIG_PATH . 'config.php';  // Incluimos el archivo de configuración
+require_once CONTROLLERS_PATH . 'UsuariosController.php';  // Incluimos el controlador de Usuarios
+require_once CONTROLLERS_PATH . 'NoticiasController.php';  // Incluimos el controlador de Noticias
+
 
 $noticiasController = new NoticiasController($pdo);
 $noticias = $noticiasController->listar(); // Obtener el listado de noticias
@@ -29,12 +32,12 @@ $noticias = $noticiasController->listar(); // Obtener el listado de noticias
             </div>
             <div class="col-md-4">
                 <!-- Formulario de inicio de sesión -->
-                <form action="login.php" method="post" class="form-inline">
+                <form action="app/views/registro.php" method="post" class="form-inline">
                     <input type="email" name="email" class="form-control mr-2" placeholder="Email" required>
                     <input type="password" name="contrasena" class="form-control mr-2" placeholder="Contraseña" required>
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                 </form>
-                <a href="registro.php" class="btn btn-secondary mt-2">Registrarse</a>
+                <a href="app/views/registro.php" class="btn btn-secondary mt-2">Registrarse</a>
             </div>
         </div>
 
@@ -53,7 +56,7 @@ $noticias = $noticiasController->listar(); // Obtener el listado de noticias
 
         <!-- Botón para añadir noticia -->
         <div class="text-right">
-            <a href="agregar_noticia.php" class="btn btn-success">Añadir noticia</a>
+            <a href="app/views/agregar_noticia.php" class="btn btn-success">Añadir noticia</a>
         </div>
     </div>
 

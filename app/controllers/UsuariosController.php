@@ -1,17 +1,32 @@
 <?php
-require_once 'app/models/Usuario.php';
+
+require_once MODELS_PATH . 'Usuario.php'; // Incluimos el modelo Usuario
+
 
 class UsuariosController {
     private $pdo;  // $pdo es una instancia de PDO, se usa para interactuar con la base de datos
 
-    public function __construct($pdo) {  // El constructor recibe una instancia de PDO
+    // Constructor que recibe una instancia de PDO
+    public function __construct($pdo) {
         $this->pdo = $pdo;  // Asignamos la instancia de PDO al atributo privado $pdo
     }
 
     // Función para registrar un nuevo usuario
     public function registrar($nombre, $email, $contrasena) {
         $usuarioModel = new Usuario($this->pdo);  // Creamos una instancia del modelo Usuario
-        return $usuarioModel->agregar($nombre, $email, $contrasena);  // Llamamos al método agregar del modelo Usuario
+
+        // Llamamos al método agregar del modelo Usuario para registrar el nuevo usuario
+        $registroExitoso = $usuarioModel->agregar($nombre, $email, $contrasena);
+
+        if ($registroExitoso) {
+            // Si el registro es exitoso, redirigimos al usuario al index con un mensaje de éxito
+            header("Location: ../index.php?mensaje=Usuario registrado con éxito");
+            exit();
+        } else {
+            // Si el registro falla, redirigimos al usuario al index con un mensaje de error
+            header("Location: ../index.php?mensaje=Error al registrar el usuario");
+            exit();
+        }
     }
 
     // Función para iniciar sesión
