@@ -1,0 +1,97 @@
+/* Estilos generales */
+
+/* Configuración de la fuente y el fondo general de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Fuente Arial para el cuerpo de la página */
+    background-color: #f4f4f4; /* Color de fondo general */
+}
+
+/* Estilos del contenedor principal */
+.container {
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 30px; /* Espaciado interno */
+}
+
+/* Estilos para los encabezados */
+h1, h2, h3 {
+    color: #333333; /* Color oscuro para los encabezados */
+}
+
+/* Estilos para el formulario de inicio de sesión */
+
+/* Centrado de los elementos del formulario */
+.form-inline {
+    align-items: center;
+}
+
+/* Estilos para los campos de entrada en el formulario */
+.form-inline .form-control {
+    width: auto; /* Ancho automático */
+    margin-right: 10px; /* Margen derecho para separar los elementos */
+}
+
+/* Estilos para las tarjetas de noticias */
+
+/* Estilos de borde y sombra para las tarjetas */
+.card {
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilos para el título de la noticia */
+.card-title {
+    color: #007bff; /* Color azul primario */
+}
+
+/* Estilos para el texto de la noticia */
+.card-text {
+    color: #666666; /* Color gris para el texto */
+}
+
+/* Estilos para los botones */
+
+/* Estilos para el botón primario (azul) */
+.btn-primary {
+    background-color: #007bff; /* Color de fondo azul */
+    border-color: #007bff; /* Color del borde azul */
+}
+
+/* Estilos hover para el botón primario */
+.btn-primary:hover {
+    background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el mouse */
+    border-color: #0056b3; /* Color del borde azul más oscuro al pasar el mouse */
+}
+
+/* Estilos para el botón secundario (gris) */
+.btn-secondary {
+    background-color: #6c757d; /* Color de fondo gris */
+    border-color: #6c757d; /* Color del borde gris */
+}
+
+/* Estilos hover para el botón secundario */
+.btn-secondary:hover {
+    background-color: #5a6268; /* Color de fondo gris más oscuro al pasar el mouse */
+    border-color: #5a6268; /* Color del borde gris más oscuro al pasar el mouse */
+}
+
+/* Estilos para el botón de éxito (verde) */
+.btn-success {
+    background-color: #28a745; /* Color de fondo verde */
+    border-color: #28a745; /* Color del borde verde */
+}
+
+/* Estilos hover para el botón de éxito */
+.btn-success:hover {
+    background-color: #218838; /* Color de fondo verde más oscuro al pasar el mouse */
+    border-color: #218838; /* Color del borde verde más oscuro al pasar el mouse */
+}
+
+/* Estilos para el botón de añadir noticia */
+
+/* Ajuste de margen superior para el botón de añadir noticia */
+.text-right .btn-success {
+    margin-top: 20px; /* Margen superior */
+}
